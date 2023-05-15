@@ -21,13 +21,16 @@ def hash_words(words_list):
     return words[start:finish]
     
 def solve_word_jumble(letters, circles, word_hash):
+    # gets all words with same number of letters
     possibilities = word_hash[len(letters)].items()
     answers = []
+    # finds all words matching the letters
     sorted_letters = sorted(letters)
     for word in possibilities:
         if sorted(word) == sorted_letters:
             answers.append(word)
 
+    # gets the circled letters currently for last word only
     letters = []
     for word in answers:
         for i in circles:
@@ -36,6 +39,7 @@ def solve_word_jumble(letters, circles, word_hash):
     return (answers, letters)
 
 def solve_final_jumble(circled_letters, num_letters, word_hash):
+    """very similar to solve jumble but uses circled letters in a list instead of a string and does not return any circled letters"""
     if circled_letters != num_letters:
         return ''
     
