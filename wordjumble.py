@@ -61,23 +61,23 @@ def test_solve_word_jumble():
 
     circled_letters = []
 
-    ans1 = solve_word_jumble('TEFON', [2,4], words)
+    ans1 = solve_word_jumble('ITNGA', [1, 4], words)
     circled_letters.append(ans1[1])
     print(ans1)
 
-    ans2 = solve_word_jumble('SOKIK', [0, 1, 3], words)
+    ans2 = solve_word_jumble('KAOEW', [2, 3, 4], words)
     circled_letters.append(ans2[1])
     print(ans2)
 
-    ans3 = solve_word_jumble("NIUMEM", [4], words)
+    ans3 = solve_word_jumble("NUCPHA", [3, 5], words)
     circled_letters.append(ans3[1])
     print(ans3)
 
-    ans4 = solve_word_jumble("SICONU", [4, 5], words)
+    ans4 = solve_word_jumble("OTLBET", [2, 3, 5], words)
     circled_letters.append(ans4[1])
     print(ans4)
     
-    print(solve_final_jumble(circled_letters, 8, words))
+    print(solve_final_jumble(circled_letters, 10, words))
 
 
 if __name__ == '__main__':
